@@ -24,7 +24,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("https://github.com/kuedan/kjvpurebiblesearch/blob/master/kjvpurebiblesearch.tar.gz")
+source=("https://github.com/kuedan/kjvpurebiblesearch/raw/master/kjvpurebiblesearch.tar.gz")
 noextract=()
 md5sums=(75eb1fef1df9812f6e851e5450dfc2e7) #generate with 'makepkg -g'
 
@@ -34,6 +34,7 @@ package() {
 	
 	msg "creating path and copying files..."
 	mkdir -p /opt/$pkgname
-	cp -R * /opt/$pkgname/
+	cp -R raw/opt/kjvpurebiblesearch/* /opt/$pkgname/
 	install -Dm 644 raw/usr/share/applications/kjvpurebiblesearch.desktop /usr/share/applications/
+	cp -r raw/usr/share/* /usr/share
 }
