@@ -26,7 +26,7 @@ install=
 changelog=
 source=("https://github.com/kuedan/kjvpurebiblesearch/blob/master/kjvpurebiblesearch.tar.gz")
 noextract=()
-md5sums=(941894ecb28fff7fc0b25c90fb94b467) #generate with 'makepkg -g'
+md5sums=(4cb2dc5812f952ce5f0e48f0408bbba0) #generate with 'makepkg -g'
 
 package() {
 	#cd "$srcdir/$pkgname-$pkgver"
