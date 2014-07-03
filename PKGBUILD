@@ -24,7 +24,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("https://github.com/kuedan/kjvpurebiblesearch.git")
+source=("https://github.com/kuedan/kjvpurebiblesearch/blob/master/kjvpurebiblesearch.tar.gz")
 noextract=()
 md5sums=(06db8bab84a615723a6bb3c16e2c4a86) #generate with 'makepkg -g'
 
