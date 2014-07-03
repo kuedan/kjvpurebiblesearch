@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Running King James Pure Bible Search in Stealth Mode..."
+pushd `dirname $0` > /dev/null
+SCRIPTPATH=`pwd -P`
+popd > /dev/null
+$SCRIPTPATH/raw/opt/kjvpurebiblesearch/KJVCanOpener/app/KingJamesPureBibleSearch -stealth &
