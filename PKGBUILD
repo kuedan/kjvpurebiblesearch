@@ -29,11 +29,11 @@ noextract=()
 md5sums=(941894ecb28fff7fc0b25c90fb94b467) #generate with 'makepkg -g'
 
 package() {
-	cd "$srcdir/$pkgname-$pkgver"
+	#cd "$srcdir/$pkgname-$pkgver"
 
 	
 	msg "creating path and copying files..."
 	mkdir -p /opt/$pkgname
-	cp -R ${srcdir}/* /opt/$pkgname/
-	install -Dm 644 ${srcdir}/${pkgname}.desktop ${pkgdir}/usr/share/applications/
+	cp -R * /opt/$pkgname/
+	install -Dm 644 raw/usr/share/applications/kjvpurebiblesearch.desktop /usr/share/applications/
 }
