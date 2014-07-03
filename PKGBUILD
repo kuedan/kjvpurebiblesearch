@@ -5,7 +5,7 @@
 
 # Maintainer: Daniel Kuecker <daniel.kuecker@gmail.com>
 pkgname=kjvpurebiblesearch
-pkgver=-2.0.0-1
+pkgver=2.0.0
 pkgrel=1
 epoch=
 pkgdesc="Study and analyze the Fingerprint of God in the mathematical structure, known as the King James Code, of the King James text of the Holy Bible. Allows instant real-time searches, with an autocompleter droplist to assist with words which come next. Jump to specific words, verses, or chapters by number, and see all possible count statistics of phrases within the text."
@@ -24,7 +24,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("http://sourceforge.net/projects/purebiblesearch/files/current/Linux/kjvpurebiblesearch-2.0.0-1.tar.gz")
+source=("https://github.com/kuedan/kjvpurebiblesearch.git")
 noextract=()
 md5sums=(06db8bab84a615723a6bb3c16e2c4a86) #generate with 'makepkg -g'
 
@@ -33,6 +33,7 @@ package() {
 
 	
 	msg "creating path and copying files..."
-	
+	mkdir -p /opt/$pkgname
+	cp -R ${srcdir}/* /opt/$pkgname/
 	install -Dm 644 ${srcdir}/${pkgname}.desktop ${pkgdir}/usr/share/applications/
 }
